@@ -1,16 +1,21 @@
 //Create a webpage with a 16x16 grid of square divs. [ ]
+let size=16;
 const gridSpace = document.querySelector(".content"); //Selects the content class in the document
 const buttons = document.querySelector(".buttons");
-const reset = document.createElement('button')
-reset.classList.add('reset')
-reset.textContent='Reset?';
-reset.addEventListener('click',(e)=>{
-    console.log('reset');
+const resetBTN = document.createElement('button')
+resetBTN.classList.add('reset')
+resetBTN.textContent='Reset?';
+resetBTN.addEventListener('click',(e)=>{
+    reset(16);
 })
-buttons.appendChild(reset)
-
+buttons.appendChild(resetBTN)
+function reset(size){
+    for (let i = 0; i<size; i++){
+        document.querySelector('.row').remove()
+    }
+    createGrid(size)
+}
 function createGrid(size){
-    
     for (let i = 0; i<size; i++){ //first loop for rows, need to append columns created on the bottom
         const row = document.createElement("div");
         row.classList.add("row");
@@ -26,4 +31,5 @@ function createGrid(size){
 
     }
 }
-createGrid(16);
+createGrid(size);
+
