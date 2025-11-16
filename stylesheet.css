@@ -16,3 +16,7 @@ h1 {
 .content {
     border: solid 1px black;
 }
+button {
+    margin: 0 30px;
+    
+}
