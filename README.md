@@ -26,10 +26,10 @@
 
 ## Extra credit
 
-1. Transform the behavior of a square when interacting with the mouse by introducing a series of modifications. [ ]
+1. Transform the behavior of a square when interacting with the mouse by introducing a series of modifications. [x]
 
     Rather than squares being the same color throughout the grid, randomize the squares’ RGB values with each interaction.
     Additionally, implement a progressive darkening effect where each interaction darkens the square by 10%. The goal is to achieve a fully black (or completely colored) square in only ten interactions.
         Hint: The opacity CSS property is useful here. To learn how to use it, check this MDN docs article about the opacity CSS property.
 
-2. You can choose to do either one or both of these challenges, it’s up to you.[ ]
+2. You can choose to do either one or both of these challenges, it’s up to you.[x]
