@@ -1,5 +1,6 @@
 //Create a webpage with a 16x16 grid of square divs. [ ]
 let size=16;
+const pxHeight = 960;
 const gridSpace = document.querySelector(".content"); //Selects the content class in the document
 const buttons = document.querySelector(".buttons");
 const resetBTN = document.createElement('button')
@@ -20,13 +21,15 @@ function reset(){
     createGrid(size);
 }
 function createGrid(size){
+    let boxsize=String(pxHeight/size)+'px';
     for (let i = 0; i<size; i++){ //first loop for rows, need to append columns created on the bottom
         const row = document.createElement("div");
         row.classList.add("row");
-
         for (let j = 0; j<size; j++){ //second loop for columns, need to create all 16 divs
             const column = document.createElement("div");
             column.classList.add("box");
+            column.style.height=boxsize;
+            column.style.width=boxsize;
             column.style.backgroundColor="white";
             column.addEventListener("mouseover",()=>{
                 column.style.backgroundColor="black";

@@ -13,8 +13,6 @@ h1 {
     justify-items: center;
  
 }
-.box {
-    height: 15px;
-    width: 15px;
-    border: solid black 1px;
+.content {
+    border: solid 1px black;
 }
